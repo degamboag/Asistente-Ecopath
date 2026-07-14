@@ -1341,6 +1341,69 @@ kbd {
   }
   .access-title { font-size: 26px; }
 }
+/* =============================================
+   API KEY SETUP SCREEN
+   ============================================= */
+.apikey-card {
+  max-width: 480px;
+}
+
+.apikey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0 20px;
+  text-align: left;
+}
+
+.apikey-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(0, 180, 216, 0.07);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition);
+}
+
+.apikey-step:hover { border-color: var(--border-accent); }
+
+.apikey-step-num {
+  min-width: 26px; height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0,180,216,0.3);
+}
+
+.apikey-step-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.apikey-step-text strong { color: var(--text-primary); }
+
+.apikey-step-text code {
+  background: rgba(0,212,170,0.12);
+  border: 1px solid rgba(0,212,170,0.2);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 11px;
+  color: var(--accent-teal);
+  font-family: monospace;
+}
+
+.apikey-link {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+.apikey-link:hover { color: var(--accent-teal); text-decoration: underline; }
 
 /* =============================================
    PDF EXTRACTION STYLES

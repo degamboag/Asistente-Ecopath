@@ -51,6 +51,66 @@
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════
+       PANTALLA DE CONFIGURACIÓN DE API KEY
+       (Aparece solo la primera vez, cuando no hay key guardada)
+       ═══════════════════════════════════════════════ -->
+  <div class="access-overlay hidden" id="apiKeyOverlay">
+    <div class="access-card apikey-card" id="apiKeyCard">
+      <div class="access-logo">🔑</div>
+      <h1 class="access-title">Configura tu API Key</h1>
+      <p class="access-subtitle">Un solo paso antes de comenzar</p>
+
+      <div class="apikey-steps">
+        <div class="apikey-step">
+          <span class="apikey-step-num">1</span>
+          <div class="apikey-step-text">
+            Ve a <a href="https://aistudio.google.com/apikey" target="_blank" class="apikey-link">aistudio.google.com/apikey ↗</a> e inicia sesión con tu cuenta de Google.
+          </div>
+        </div>
+        <div class="apikey-step">
+          <span class="apikey-step-num">2</span>
+          <div class="apikey-step-text">
+            Haz click en <strong>"Create API key"</strong> y copia la clave generada (empieza por <code>AIzaSy...</code>).
+          </div>
+        </div>
+        <div class="apikey-step">
+          <span class="apikey-step-num">3</span>
+          <div class="apikey-step-text">
+            Pega aquí tu clave personal. Se guarda <strong>solo en tu navegador</strong> y no se comparte con nadie.
+          </div>
+        </div>
+      </div>
+
+      <div class="access-form">
+        <div class="access-input-wrap" id="apiKeyInputWrap">
+          <span class="access-input-icon">🔑</span>
+          <input
+            type="text"
+            id="apiKeySetupInput"
+            class="access-input"
+            placeholder="Pega aquí tu API Key de Gemini..."
+            onkeydown="handleApiKeySetupKey(event)"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+        <button class="access-btn" id="apiKeySaveBtn" onclick="saveApiKeyAndEnter()">
+          Guardar y entrar al asistente →
+        </button>
+      </div>
+
+      <div class="access-error hidden" id="apiKeyError">
+        ⚠️ Ingresa una API Key válida (debe empezar por AIzaSy... o similar).
+      </div>
+
+      <p class="access-footer" style="margin-top:12px">
+        🔒 Tu clave es privada y se almacena solo en tu navegador.<br>
+        No se comparte con el profesor ni con otros estudiantes.
+      </p>
+    </div>
+  </div>
+
   <!-- Animated background particles (app) -->
   <div class="bg-particles" id="bgParticles"></div>
 

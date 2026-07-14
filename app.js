@@ -100,7 +100,13 @@ function checkPassword() {
       overlay.style.opacity = "0";
       setTimeout(() => {
         overlay.style.display = "none";
-        init(); // Inicializar la app solo tras autenticación correcta
+        // Verificar si el estudiante ya tiene su propia API Key guardada
+        const savedKey = localStorage.getItem(STORAGE_KEY_API);
+        if (!savedKey || savedKey.trim() === "") {
+          showApiKeySetupScreen();
+        } else {
+          init();
+        }
       }, 400);
     }, 300);
   } else {
@@ -122,6 +128,59 @@ function handleAccessKey(event) {
   if (event.key === "Enter") checkPassword();
   // Ocultar error al escribir
   document.getElementById("accessError").classList.add("hidden");
+}
+
+// ─── API Key Setup Screen ─────────────────────────────────────────
+function showApiKeySetupScreen() {
+  const overlay = document.getElementById("apiKeyOverlay");
+  overlay.classList.remove("hidden");
+  overlay.style.opacity = "0";
+  overlay.style.transition = "opacity 0.4s ease";
+  requestAnimationFrame(() => {
+    overlay.style.opacity = "1";
+  });
+  setTimeout(() => {
+    const input = document.getElementById("apiKeySetupInput");
+    if (input) input.focus();
+  }, 500);
+}
+
+function saveApiKeyAndEnter() {
+  const input = document.getElementById("apiKeySetupInput");
+  const errorEl = document.getElementById("apiKeyError");
+  const key = input.value.trim();
+
+  if (!key || key.length < 20) {
+    errorEl.classList.remove("hidden");
+    input.style.borderColor = "rgba(255, 80, 80, 0.5)";
+    setTimeout(() => { input.style.borderColor = ""; }, 1500);
+    return;
+  }
+
+  // Guardar la key en localStorage
+  localStorage.setItem(STORAGE_KEY_API, key);
+  errorEl.classList.add("hidden");
+
+  // Animación de salida
+  const overlay = document.getElementById("apiKeyOverlay");
+  const card = document.getElementById("apiKeyCard");
+  card.style.transition = "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)";
+  card.style.transform = "scale(0.95) translateY(-20px)";
+  card.style.opacity = "0";
+
+  setTimeout(() => {
+    overlay.style.transition = "opacity 0.4s ease";
+    overlay.style.opacity = "0";
+    setTimeout(() => {
+      overlay.style.display = "none";
+      init();
+    }, 400);
+  }, 300);
+}
+
+function handleApiKeySetupKey(event) {
+  if (event.key === "Enter") saveApiKeyAndEnter();
+  document.getElementById("apiKeyError").classList.add("hidden");
 }
 
 // ─── Init ─────────────────────────────────────────────────────────
@@ -1113,7 +1172,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (sessionStorage.getItem(SESSION_KEY_AUTH) === "true") {
     const overlay = document.getElementById("accessOverlay");
     if (overlay) overlay.style.display = "none";
-    init();
+    // Verificar si el estudiante ya tiene su propia API Key guardada
+    const savedKey = localStorage.getItem(STORAGE_KEY_API);
+    if (!savedKey || savedKey.trim() === "") {
+      showApiKeySetupScreen();
+    } else {
+      init();
+    }
   } else {
     // Enfocar el campo de contraseña automáticamente
     setTimeout(() => {
