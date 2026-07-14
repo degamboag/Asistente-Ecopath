@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <Platform>Microsoft Windows NT 10.0.26200.0</Platform>
+  <Is64BitOS>True</Is64BitOS>
+  <ModelName>Ensayo</ModelName>
+  <Created>1:12:44 a. m. martes, 7 de julio de 2026</Created>
+<Session_Started
+  Date="1:12:44 a. m. martes, 7 de julio de 2026">
+  <Model>Ensayo</Model>
+  <LogFile>E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo_log.xml</LogFile>
+  <Is64BitExe>True</Is64BitExe>
+  <CultureOS>Español (Colombia)</CultureOS>
+  <CultureUI>Español (España)</CultureUI>
+  <DecimalSeparator>,</DecimalSeparator>
+</Session_Started>
+<Information_Message
+  Date="1:12:44 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath model 'E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo.EwEmdb' loaded.</Message>
+  <Message_Type>DataAddedOrRemoved</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Question_Message
+  Date="1:16:45 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Log_Message
+  Date="1:16:57 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:16:57 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:16:57 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:16:57 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:16:57 a. m. martes, 7 de julio de 2026">
+  <Message>Ecosim scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:16:57 a. m. martes, 7 de julio de 2026">
+  <Message>Model closed</Message>
+</Log_Message>
+<Session_Started
+  Date="1:16:58 a. m. martes, 7 de julio de 2026">
+  <Model>Ensayo</Model>
+  <LogFile>E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo_log.xml</LogFile>
+  <Is64BitExe>True</Is64BitExe>
+  <CultureOS>Español (Colombia)</CultureOS>
+  <CultureUI>Español (España)</CultureUI>
+  <DecimalSeparator>,</DecimalSeparator>
+</Session_Started>
+<Information_Message
+  Date="1:16:58 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath model 'E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo.EwEmdb' loaded.</Message>
+  <Message_Type>DataAddedOrRemoved</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Log_Message
+  Date="1:47:42 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:47:42 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:47:42 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:47:42 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:47:42 a. m. martes, 7 de julio de 2026">
+  <Message>Ecosim scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:47:43 a. m. martes, 7 de julio de 2026">
+  <Message>Model closed</Message>
+</Log_Message>
+<Session_Started
+  Date="1:47:43 a. m. martes, 7 de julio de 2026">
+  <Model>Ensayo</Model>
+  <LogFile>E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo_log.xml</LogFile>
+  <Is64BitExe>True</Is64BitExe>
+  <CultureOS>Español (Colombia)</CultureOS>
+  <CultureUI>Español (España)</CultureUI>
+  <DecimalSeparator>,</DecimalSeparator>
+</Session_Started>
+<Information_Message
+  Date="1:47:43 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath model 'E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo.EwEmdb' loaded.</Message>
+  <Message_Type>DataAddedOrRemoved</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Question_Message
+  Date="1:49:59 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Log_Message
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Message>Ecosim scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Message>Model closed</Message>
+</Log_Message>
+<Session_Started
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Model>Ensayo</Model>
+  <LogFile>E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo_log.xml</LogFile>
+  <Is64BitExe>True</Is64BitExe>
+  <CultureOS>Español (Colombia)</CultureOS>
+  <CultureUI>Español (España)</CultureUI>
+  <DecimalSeparator>,</DecimalSeparator>
+</Session_Started>
+<Information_Message
+  Date="1:50:02 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath model 'E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo.EwEmdb' loaded.</Message>
+  <Message_Type>DataAddedOrRemoved</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Critical_Message
+  Date="1:58:05 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="1:58:05 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="1:58:20 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Warning_Message
+  Date="2:02:19 a. m. martes, 7 de julio de 2026">
+  <Message>Predatory cycling index cannot be calculated.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>External</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Warning_Message>
+<Warning_Message
+  Date="2:03:40 a. m. martes, 7 de julio de 2026">
+  <Message>Please load an Ecosim scenario before running Network Analysis for Ecosim.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Plugin</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Warning_Message>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Critical_Message
+  Date="2:06:12 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="2:06:12 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:06:24 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Critical_Message
+  Date="2:14:43 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="2:14:43 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:14:57 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Critical_Message
+  Date="2:20:17 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="2:20:17 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:20:27 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Critical_Message
+  Date="2:21:35 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="2:21:35 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:21:38 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Critical_Message
+  Date="2:22:20 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="2:22:20 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:22:22 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Critical_Message
+  Date="2:24:23 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="2:24:23 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:24:32 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Warning_Message
+  Date="2:27:18 a. m. martes, 7 de julio de 2026">
+  <Message>Diet for one or more groups does not sum to 1. Do you want to normalize diets to 1 for ALL predator groups?</Message>
+  <Message_Type>DietComp</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>CANCEL</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Warning_Message>
+<Warning_Message
+  Date="2:27:18 a. m. martes, 7 de julio de 2026">
+  <Message>Diet for one or more groups does not sum to 1. Do you want to normalize diets to 1 for ALL predator groups?</Message>
+  <Message_Type>DietComp</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>CANCEL</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Warning_Message>
+<Warning_Message
+  Date="2:27:29 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath diets have changed</Message>
+  <Message_Type>DataModified</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Warning_Message>
+<Critical_Message
+  Date="2:27:29 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Warning_Message
+  Date="2:27:29 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath diets have changed</Message>
+  <Message_Type>DataModified</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Warning_Message>
+<Critical_Message
+  Date="2:27:34 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:27:36 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Critical_Message
+  Date="2:28:16 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Critical_Message
+  Date="2:28:16 a. m. martes, 7 de julio de 2026">
+  <Message>Respiration cannot be negative. Summary statistics for the system are suppressed. Please check parameters and rerun program.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Critical_Message>
+<Information_Message
+  Date="2:28:18 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Question_Message
+  Date="2:35:25 a. m. martes, 7 de julio de 2026">
+  <Message>Are you sure you want to delete group 'Caballa? This action cannot be undone.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>CANCEL</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:35:27 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath and plug-in(s) will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:35:40 a. m. martes, 7 de julio de 2026">
+  <Message>Are you sure you want to delete group 'Caballa? This action cannot be undone.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>CANCEL</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:35:44 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath and plug-in(s) will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:36:38 a. m. martes, 7 de julio de 2026">
+  <Message>Are you sure you want to delete group 'Caballa? This action cannot be undone.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>CANCEL</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:36:42 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath and plug-in(s) will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:36:50 a. m. martes, 7 de julio de 2026">
+  <Message>Are you sure you want to delete group 'Caballa? This action cannot be undone.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>CANCEL</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:36:51 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath and plug-in(s) will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:37:20 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath and plug-in(s) will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Question_Message
+  Date="2:37:31 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath and plug-in(s) will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Log_Message
+  Date="2:37:40 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:37:40 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:37:40 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:37:40 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:37:40 a. m. martes, 7 de julio de 2026">
+  <Message>Ecosim scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:37:40 a. m. martes, 7 de julio de 2026">
+  <Message>Model closed</Message>
+</Log_Message>
+<Session_Started
+  Date="2:44:17 a. m. martes, 7 de julio de 2026">
+  <Model>Ensayo</Model>
+  <LogFile>E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo_log.xml</LogFile>
+  <Is64BitExe>True</Is64BitExe>
+  <CultureOS>Español (Colombia)</CultureOS>
+  <CultureUI>Español (España)</CultureUI>
+  <DecimalSeparator>,</DecimalSeparator>
+</Session_Started>
+<Information_Message
+  Date="2:44:17 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath model 'E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo.EwEmdb' loaded.</Message>
+  <Message_Type>DataAddedOrRemoved</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Question_Message
+  Date="2:44:27 a. m. martes, 7 de julio de 2026">
+  <Message>Are you sure you want to delete group 'Caballa? This action cannot be undone.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>CANCEL</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Log_Message
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Message>Ecosim scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Message>Model closed</Message>
+</Log_Message>
+<Session_Started
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Model>Ensayo</Model>
+  <LogFile>E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo_log.xml</LogFile>
+  <Is64BitExe>True</Is64BitExe>
+  <CultureOS>Español (Colombia)</CultureOS>
+  <CultureUI>Español (España)</CultureUI>
+  <DecimalSeparator>,</DecimalSeparator>
+</Session_Started>
+<Information_Message
+  Date="2:44:30 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath model 'E:\Mi Unidad\Drive\AG_Projects\Assist_Ecopath\Ensayo.EwEmdb' loaded.</Message>
+  <Message_Type>DataAddedOrRemoved</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Warning_Message
+  Date="2:46:40 a. m. martes, 7 de julio de 2026">
+  <Message>Enter Biomass for all detritus groups before proceeding to Ecosim.</Message>
+  <Message_Type>InvalidModel_B_Detritus</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Warning_Message>
+<Warning_Message
+  Date="2:46:40 a. m. martes, 7 de julio de 2026">
+  <Message>Catch information (Landing + Discard) is missing for one of more fleets.</Message>
+  <Message_Type>NoCatchForFleet</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>FleetInput</Message_DataType>
+</Warning_Message>
+<Warning_Message
+  Date="2:46:40 a. m. martes, 7 de julio de 2026">
+  <Message>Enter Biomass for all detritus groups before proceeding to Ecosim.</Message>
+  <Message_Type>InvalidModel_B_Detritus</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Warning_Message>
+<Warning_Message
+  Date="2:46:51 a. m. martes, 7 de julio de 2026">
+  <Message>Catch information (Landing + Discard) is missing for one of more fleets.</Message>
+  <Message_Type>NoCatchForFleet</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>FleetInput</Message_DataType>
+</Warning_Message>
+<Information_Message
+  Date="2:46:56 a. m. martes, 7 de julio de 2026">
+  <Message>Ecopath run completed.</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Ecopath</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Information_Message>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Entry>
+  <Formcannotberesolved>frmEwE6 cmdNavigate OnInvoke</Formcannotberesolved>
+</Entry>
+<Warning_Message
+  Date="2:52:20 a. m. martes, 7 de julio de 2026">
+  <Message>Please load an Ecosim scenario before running Network Analysis for Ecosim.</Message>
+  <Message_Type>ErrorEncountered</Message_Type>
+  <Message_Source>Plugin</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+</Warning_Message>
+<Question_Message
+  Date="2:58:04 a. m. martes, 7 de julio de 2026">
+  <Message>Unsaved changes in Ecopath will be lost if you proceed. Do you wish to save these changes?</Message>
+  <Message_Type>Any</Message_Type>
+  <Message_Source>Core</Message_Source>
+  <Message_DataType>NotSet</Message_DataType>
+  <Message_Reply>YES</Message_Reply>
+  <Message_Suppressable>False</Message_Suppressable>
+  <Message_Suppressed>False</Message_Suppressed>
+</Question_Message>
+<Log_Message
+  Date="2:58:07 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:58:07 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:58:07 a. m. martes, 7 de julio de 2026">
+  <Message>Ecospace scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:58:07 a. m. martes, 7 de julio de 2026">
+  <Message>Ecotracer scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:58:07 a. m. martes, 7 de julio de 2026">
+  <Message>Ecosim scenario closed</Message>
+</Log_Message>
+<Log_Message
+  Date="2:58:07 a. m. martes, 7 de julio de 2026">
+  <Message>Model closed</Message>
+</Log_Message>
+</doc>

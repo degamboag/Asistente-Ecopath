@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asistente Ecopath | EwE Advisor</title>
+  <meta name="description" content="Asistente inteligente para Ecopath with Ecosim (EwE). Responde preguntas, interpreta pantallazos y te guía paso a paso en la construcción de modelos tróficos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       PANTALLA DE ACCESO CON CONTRASEÑA
+       ═══════════════════════════════════════════════ -->
+  <div class="access-overlay" id="accessOverlay">
+    <div class="bg-particles" id="bgParticlesLogin"></div>
+
+    <div class="access-card" id="accessCard">
+      <div class="access-logo">🌊</div>
+      <h1 class="access-title">EwE Advisor</h1>
+      <p class="access-subtitle">Asistente de Ecopath with Ecosim</p>
+      <p class="access-desc">Ingresa la contraseña para acceder al asistente</p>
+
+      <div class="access-form">
+        <div class="access-input-wrap" id="accessInputWrap">
+          <span class="access-input-icon">🔐</span>
+          <input
+            type="password"
+            id="accessPasswordInput"
+            class="access-input"
+            placeholder="Contraseña de acceso..."
+            onkeydown="handleAccessKey(event)"
+            autocomplete="off"
+          />
+        </div>
+        <button class="access-btn" id="accessBtn" onclick="checkPassword()">
+          Ingresar al asistente →
+        </button>
+      </div>
+
+      <div class="access-error hidden" id="accessError">
+        ⚠️ Contraseña incorrecta. Intenta de nuevo.
+      </div>
+
+      <p class="access-footer">
+        Herramienta académica · Curso de modelado trófico
+      </p>
+    </div>
+  </div>
+
+  <!-- Animated background particles (app) -->
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+
+    <!-- Sidebar: Quick Reference -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">🌊</div>
+          <div class="logo-text">
+            <span class="logo-title">EwE Advisor</span>
+            <span class="logo-sub">Ecopath with Ecosim</span>
+          </div>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle" title="Colapsar panel">‹</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-tab active" id="tabGuide" onclick="switchTab('guide')">
+          <span class="tab-icon">📋</span>
+          <span class="tab-label">Guía de Pasos</span>
+        </button>
+        <button class="nav-tab" id="tabParams" onclick="switchTab('params')">
+          <span class="tab-icon">🔬</span>
+          <span class="tab-label">Parámetros</span>
+        </button>
+        <button class="nav-tab" id="tabBalance" onclick="switchTab('balance')">
+          <span class="tab-icon">⚖️</span>
+          <span class="tab-label">Checklist Balance</span>
+        </button>
+        <button class="nav-tab" id="tabPrompts" onclick="switchTab('prompts')">
+          <span class="tab-icon">💡</span>
+          <span class="tab-label">Preguntas Rápidas</span>
+        </button>
+        <button class="nav-tab" id="tabPdf" onclick="switchTab('pdf')">
+          <span class="tab-icon">📄</span>
+          <span class="tab-label">Extraer PDF</span>
+        </button>
+      </nav>
+
+      <!-- Tab: Guía de Pasos -->
+      <div class="tab-content active" id="contentGuide">
+        <h3 class="section-title">Construye tu modelo Ecopath</h3>
+        <div class="steps-list">
+          <div class="step-item" onclick="sendQuickPrompt('Explícame el paso 1: definir grupos funcionales en Ecopath')">
+            <div class="step-number">1</div>
+            <div class="step-info">
+              <div class="step-name">Definir Grupos Funcionales</div>
+              <div class="step-desc">Organismos, detritos y flotas pesqueras</div>
+            </div>
+          </div>
+          <div class="step-item" onclick="sendQuickPrompt('Explícame el paso 2: ingresar los parámetros básicos de los grupos en Ecopath (P/B, Q/B, EE, biomasa)')">
+            <div class="step-number">2</div>
+            <div class="step-info">
+              <div class="step-name">Ingresar Parámetros Básicos</div>
+              <div class="step-desc">Biomasa, P/B, Q/B, EE</div>
+            </div>
+          </div>
+          <div class="step-item" onclick="sendQuickPrompt('Explícame el paso 3: definir la Dieta (Diet Composition DC) en Ecopath y cómo llenar la matriz de dieta')">
+            <div class="step-number">3</div>
+            <div class="step-info">
+              <div class="step-name">Matriz de Dieta (DC)</div>
+              <div class="step-desc">Composición de dieta por grupo</div>
+            </div>
+          </div>
+          <div class="step-item" onclick="sendQuickPrompt('Explícame el paso 4: ingresar datos de pesquería en Ecopath: capturas, descarte y flota')">
+            <div class="step-number">4</div>
+            <div class="step-info">
+              <div class="step-name">Datos de Pesquería</div>
+              <div class="step-desc">Capturas, descarte, esfuerzo</div>
+            </div>
+          </div>
+          <div class="step-item" onclick="sendQuickPrompt('Explícame el paso 5: correr Ecopath y cómo interpretar el resultado de balance del modelo, qué significa cuando EE > 1')">
+            <div class="step-number">5</div>
+            <div class="step-info">
+              <div class="step-name">Correr & Balancear Modelo</div>
+              <div class="step-desc">EE, producción, consumo</div>
+            </div>
+          </div>
+          <div class="step-item" onclick="sendQuickPrompt('Explícame el paso 6: pasar de Ecopath a Ecosim para simulaciones dinámicas')">
+            <div class="step-number">6</div>
+            <div class="step-info">
+              <div class="step-name">Pasar a Ecosim</div>
+              <div class="step-desc">Simulaciones dinámicas temporales</div>
+            </div>
+          </div>
+          <div class="step-item" onclick="sendQuickPrompt('Explícame el paso 7: Ecospace en EwE, cómo modelar distribución espacial del ecosistema')">
+            <div class="step-number">7</div>
+            <div class="step-info">
+              <div class="step-name">Ecospace</div>
+              <div class="step-desc">Distribución espacial del ecosistema</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Parámetros -->
+      <div class="tab-content" id="contentParams">
+        <h3 class="section-title">Parámetros Clave de Ecopath</h3>
+        <div class="params-list">
+          <div class="param-card" onclick="sendQuickPrompt('¿Qué es el parámetro EE (Ecotrophic Efficiency) en Ecopath? ¿Cómo se interpreta y qué significa cuando es mayor a 1?')">
+            <div class="param-badge">EE</div>
+            <div class="param-info">
+              <div class="param-name">Eficiencia Ecotrófica</div>
+              <div class="param-desc">Fracción de producción usada por el ecosistema. Rango: 0–1</div>
+            </div>
+          </div>
+          <div class="param-card" onclick="sendQuickPrompt('¿Qué es P/B (Production/Biomass ratio) en Ecopath? ¿Cómo se estima y qué relación tiene con Z (mortalidad total)?')">
+            <div class="param-badge">P/B</div>
+            <div class="param-info">
+              <div class="param-name">Producción / Biomasa</div>
+              <div class="param-desc">Tasa de producción. Equivale a Z (mortalidad total)</div>
+            </div>
+          </div>
+          <div class="param-card" onclick="sendQuickPrompt('¿Qué es Q/B (Consumption/Biomass ratio) en Ecopath? ¿Cómo se estima para diferentes grupos?')">
+            <div class="param-badge">Q/B</div>
+            <div class="param-info">
+              <div class="param-name">Consumo / Biomasa</div>
+              <div class="param-desc">Tasa de consumo alimentario del grupo</div>
+            </div>
+          </div>
+          <div class="param-card" onclick="sendQuickPrompt('¿Qué es BA (Biomass Accumulation) en Ecopath y cuándo se usa?')">
+            <div class="param-badge">BA</div>
+            <div class="param-info">
+              <div class="param-name">Acumulación de Biomasa</div>
+              <div class="param-desc">Cambio neto de biomasa en el período</div>
+            </div>
+          </div>
+          <div class="param-card" onclick="sendQuickPrompt('¿Qué es DC (Diet Composition) en Ecopath? ¿Cómo se llena la matriz de dieta correctamente?')">
+            <div class="param-badge">DC</div>
+            <div class="param-info">
+              <div class="param-name">Composición de Dieta</div>
+              <div class="param-desc">Fracción de cada presa en la dieta. Suma = 1</div>
+            </div>
+          </div>
+          <div class="param-card" onclick="sendQuickPrompt('¿Cómo se calcula P/Q (eficiencia de producción por consumo) en Ecopath y qué valores son típicos?')">
+            <div class="param-badge">P/Q</div>
+            <div class="param-info">
+              <div class="param-name">Eficiencia de Producción</div>
+              <div class="param-desc">Razón producción/consumo. Típico: 0.1–0.3</div>
+            </div>
+          </div>
+          <div class="param-card" onclick="sendQuickPrompt('¿Qué es GE (Growth Efficiency = P/Q) y cómo se relaciona con GS (unassimilated food) en Ecopath?')">
+            <div class="param-badge">GE</div>
+            <div class="param-info">
+              <div class="param-name">Eficiencia de Crecimiento</div>
+              <div class="param-desc">P/Q — Eficiencia neta de conversión de alimento</div>
+            </div>
+          </div>
+          <div class="param-card" onclick="sendQuickPrompt('¿Qué es TL (Trophic Level) en Ecopath y cómo se calcula?')">
+            <div class="param-badge">TL</div>
+            <div class="param-info">
+              <div class="param-name">Nivel Trófico</div>
+              <div class="param-desc">Posición en la red alimentaria. Productores = 1</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Checklist Balance -->
+      <div class="tab-content" id="contentBalance">
+        <h3 class="section-title">Checklist de Balance del Modelo</h3>
+        <p class="section-desc">Un modelo balanceado cumple estas condiciones:</p>
+        <div class="checklist">
+          <label class="check-item">
+            <input type="checkbox" id="check1" />
+            <span class="checkmark"></span>
+            <div class="check-text">
+              <strong>EE ≤ 1</strong> para todos los grupos
+              <small>Si EE &gt; 1, la producción no alcanza para cubrir la demanda</small>
+            </div>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="check2" />
+            <span class="checkmark"></span>
+            <div class="check-text">
+              <strong>P/Q ≤ 1</strong> (típico 0.1–0.3)
+              <small>Un consumidor no puede producir más de lo que consume</small>
+            </div>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="check3" />
+            <span class="checkmark"></span>
+            <div class="check-text">
+              <strong>Dieta suma = 1</strong> para cada depredador
+              <small>La fracción total de presas en la dieta debe ser 100%</small>
+            </div>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="check4" />
+            <span class="checkmark"></span>
+            <div class="check-text">
+              <strong>Biomasa &gt; 0</strong> para todos los grupos
+              <small>No puede haber grupos con biomasa negativa o cero</small>
+            </div>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="check5" />
+            <span class="checkmark"></span>
+            <div class="check-text">
+              <strong>Niveles tróficos coherentes</strong>
+              <small>Depredadores siempre con TL mayor que sus presas</small>
+            </div>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="check6" />
+            <span class="checkmark"></span>
+            <div class="check-text">
+              <strong>Pedigree ≥ 0.4</strong> (deseable)
+              <small>Mide calidad y confianza de los datos de entrada</small>
+            </div>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" id="check7" />
+            <span class="checkmark"></span>
+            <div class="check-text">
+              <strong>Sin warnings críticos</strong>
+              <small>Revisar el output log de Ecopath para errores</small>
+            </div>
+          </label>
+        </div>
+        <button class="reset-checks-btn" onclick="resetChecklist()">Reiniciar checklist</button>
+        <button class="ask-balance-btn" onclick="sendQuickPrompt('Mi modelo Ecopath no está balanceado. ¿Cuáles son los pasos para identificar y corregir grupos con EE mayor a 1?')">
+          🤖 Pedir ayuda para balancear
+        </button>
+      </div>
+
+      <!-- Tab: Preguntas Rápidas -->
+      <div class="tab-content" id="contentPrompts">
+        <h3 class="section-title">Preguntas Frecuentes</h3>
+        <div class="quick-prompts-grid">
+          <button class="qprompt-btn" onclick="sendQuickPrompt('¿Cómo instalo y configuro Ecopath with Ecosim por primera vez?')">
+            🖥️ ¿Cómo instalo EwE?
+          </button>
+          <button class="qprompt-btn" onclick="sendQuickPrompt('¿Cuántos grupos funcionales debo incluir en mi modelo Ecopath y cómo los elijo?')">
+            🐟 ¿Cuántos grupos usar?
+          </button>
+          <button class="qprompt-btn" onclick="sendQuickPrompt('Mi modelo Ecopath tiene un EE mayor a 1 en un grupo. ¿Qué debo hacer para corregirlo?')">
+            ⚠️ EE mayor a 1
+          </button>
+          <button class="qprompt-btn" onclick="sendQuickPrompt('¿Cómo incluir datos de pesquería (capturas y descarte) en el modelo Ecopath?')">
+            🎣 Datos de pesca
+          </button>
+          <button class="qprompt-btn" onclick="sendQuickPrompt('¿Qué es el índice de Pedigree en Ecopath y cómo mejorarlo?')">
+            📊 Índice de Pedigree
+          </button>
+          <button class="qprompt-btn" onclick="sendQuickPrompt('¿Cómo se pasa de un modelo Ecopath a Ecosim para hacer simulaciones dinámicas?')">
+            ⏱️ Ecopath → Ecosim
+          </button>
+          <button class="qprompt-btn" onclick="sendQuickPrompt('¿Qué es el flujo de detritos en Ecopath y cómo configurarlo correctamente?')">
+            🍂 Flujo de detritos
+          </button>
+          <button class="qprompt-btn" onclick="sendQuickPrompt('¿Cómo citar correctamente un modelo Ecopath with Ecosim en publicaciones científicas?')">
+            📄 ¿Cómo citar EwE?
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab: Extraer PDF -->
+      <div class="tab-content" id="contentPdf">
+        <h3 class="section-title">Extracción de Parámetros</h3>
+        <p class="section-desc">Sube un artículo científico en formato PDF y extrae automáticamente los parámetros tróficos.</p>
+        
+        <!-- Drag & Drop Zone for PDF -->
+        <div class="pdf-drop-zone" id="pdfDropZone" onclick="document.getElementById('pdfFileInput').click()">
+          <div class="pdf-drop-icon">📄</div>
+          <div class="pdf-drop-text">Arrastra un artículo PDF aquí<br><small>o haz click para seleccionar</small></div>
+          <input type="file" id="pdfFileInput" accept="application/pdf" style="display:none" onchange="handlePdfUpload(event)" />
+        </div>
+
+        <!-- PDF Status Indicator -->
+        <div class="pdf-status-bar hidden" id="pdfStatusBar">
+          <span class="pdf-status-name" id="pdfStatusName">documento.pdf</span>
+          <button class="pdf-status-remove" onclick="removePdf()" title="Quitar documento">✕</button>
+        </div>
+
+        <!-- Checkboxes for Parameters -->
+        <div class="pdf-options">
+          <span class="options-title">Parámetros a extraer:</span>
+          <div class="options-grid">
+            <label class="opt-item">
+              <input type="checkbox" id="extB" checked />
+              <span>Biomasa (B)</span>
+            </label>
+            <label class="opt-item">
+              <input type="checkbox" id="extPB" checked />
+              <span>P/B</span>
+            </label>
+            <label class="opt-item">
+              <input type="checkbox" id="extQB" checked />
+              <span>Q/B</span>
+            </label>
+            <label class="opt-item">
+              <input type="checkbox" id="extEE" checked />
+              <span>EE</span>
+            </label>
+            <label class="opt-item">
+              <input type="checkbox" id="extTL" checked />
+              <span>Nivel Trófico (TL)</span>
+            </label>
+            <label class="opt-item">
+              <input type="checkbox" id="extGE" checked />
+              <span>P/Q (GE)</span>
+            </label>
+            <label class="opt-item">
+              <input type="checkbox" id="extDC" checked />
+              <span>Dieta (DC)</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="extract-btn" id="extractBtn" onclick="extractParamsFromPdf()" disabled>
+          🔍 Extraer Parámetros
+        </button>
+
+        <!-- Dedicated Results Section (Option B) -->
+        <div class="pdf-results-panel hidden" id="pdfResultsPanel">
+          <div class="results-header">
+            <h4>Datos Extraídos</h4>
+            <button class="csv-btn" onclick="exportPdfTableToCSV()" title="Exportar a CSV">📥 CSV</button>
+          </div>
+          <div class="results-meta" id="resultsMeta">
+            <!-- Article details: Title, Eco, Year -->
+          </div>
+          <div class="results-table-wrapper">
+            <table id="extractedTable">
+              <thead>
+                <!-- Table headers populated dynamically -->
+              </thead>
+              <tbody id="extractedTableBody">
+                <!-- Data populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+          <div class="results-notes" id="resultsNotes">
+            <!-- Additional text/methodology warnings -->
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="main-content">
+      <!-- Top bar -->
+      <header class="topbar">
+        <button class="mobile-sidebar-btn" id="mobileSidebarBtn" onclick="toggleSidebar()">☰</button>
+        <div class="topbar-title">
+          <h1>Asistente Ecopath</h1>
+          <span class="status-dot" id="statusDot"></span>
+          <span class="status-text" id="statusText">Listo</span>
+        </div>
+        <div class="topbar-actions">
+          <button class="action-btn" id="clearBtn" onclick="clearChat()" title="Limpiar conversación">🗑️</button>
+          <button class="action-btn" id="settingsBtn" onclick="toggleSettings()" title="Configuración">⚙️</button>
+        </div>
+      </header>
+
+      <!-- Settings Panel -->
+      <div class="settings-panel hidden" id="settingsPanel">
+        <div class="settings-content">
+          <h3>⚙️ Configuración</h3>
+          <div class="setting-row">
+            <label for="apiKeyInput">API Key de Gemini</label>
+            <div class="api-key-row">
+              <input type="password" id="apiKeyInput" placeholder="Ingresa tu API key de Gemini..." />
+              <button onclick="saveApiKey()" class="save-key-btn">Guardar</button>
+            </div>
+            <small>Tu clave se guarda solo en este navegador y nunca se envía a terceros.</small>
+          </div>
+          <div class="setting-row">
+            <label for="modelSelect">Modelo de IA</label>
+            <select id="modelSelect" onchange="saveSettings()">
+              <option value="gemini-2.0-flash">Gemini 2.0 Flash (Recomendado)</option>
+              <option value="gemini-2.5-flash">Gemini 2.5 Flash (Más potente)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat messages -->
+      <div class="chat-area" id="chatArea">
+        <!-- Welcome message -->
+        <div class="welcome-screen" id="welcomeScreen">
+          <div class="welcome-icon">🌊</div>
+          <h2>Hola, soy tu asistente de Ecopath</h2>
+          <p>Puedo ayudarte a construir y balancear tu modelo trófico paso a paso.<br>
+          Escríbeme una pregunta, sube una captura de pantalla o usa el panel izquierdo para guiarte.</p>
+          <div class="welcome-suggestions">
+            <button class="suggestion-chip" onclick="sendQuickPrompt('¿Por dónde empiezo a construir un modelo en Ecopath? Soy principiante.')">
+              🐣 Soy principiante, ¿por dónde empiezo?
+            </button>
+            <button class="suggestion-chip" onclick="sendQuickPrompt('¿Cuáles son los datos mínimos que necesito para construir un modelo Ecopath?')">
+              📋 ¿Qué datos necesito tener?
+            </button>
+            <button class="suggestion-chip" onclick="sendQuickPrompt('Explícame la ecuación de balance de Ecopath de forma sencilla')">
+              ⚖️ ¿Cómo funciona el balance?
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image preview bar -->
+      <div class="image-preview-bar hidden" id="imagePreviewBar">
+        <div class="image-preview-content">
+          <img id="imagePreviewThumb" src="" alt="Captura a enviar" />
+          <span id="imagePreviewLabel">Captura lista para enviar</span>
+          <button onclick="removeImage()" class="remove-image-btn" title="Quitar imagen">✕</button>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+        <div class="input-toolbar">
+          <button class="toolbar-btn" id="pasteImageBtn" onclick="pasteFromClipboard()" title="Pegar captura de pantalla (Ctrl+V)">
+            📸 Pegar captura
+          </button>
+          <label class="toolbar-btn" for="fileInput" title="Subir imagen">
+            🖼️ Subir imagen
+            <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="handleFileUpload(event)" />
+          </label>
+          <div class="drag-hint">o arrastra una imagen aquí</div>
+        </div>
+        <div class="input-row">
+          <div class="textarea-wrapper" id="dropZone">
+            <textarea
+              id="messageInput"
+              placeholder="Escribe tu pregunta sobre Ecopath... o pega una captura de pantalla con Ctrl+V"
+              rows="1"
+              onkeydown="handleKeyDown(event)"
+              oninput="autoResize(this)"
+            ></textarea>
+          </div>
+          <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="Enviar (Enter)">
+            <span class="send-icon">➤</span>
+          </button>
+        </div>
+        <div class="input-hint">Presiona <kbd>Enter</kbd> para enviar · <kbd>Shift+Enter</kbd> para nueva línea</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

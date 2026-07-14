@@ -1,0 +1,6 @@
+# Ignorar instaladores de Ecopath
+ewe_6.7.0.18865_32-bit_setup.exe
+
+# Ignorar PDFs de referencia locales (evita sobrepasar el límite de tamaño de GitHub)
+*.pdf
+!README.md
