@@ -13,12 +13,11 @@ const SESSION_KEY_AUTH  = "ecopath_auth";
 // Modifica esta cadena para cambiar la contraseña del curso
 const ACCESS_PASSWORD = "ecopath2026";
 
-// Modelos de respaldo en orden de prioridad
+// Modelos de respaldo en orden de prioridad (compatibles con cuentas nuevas)
 const FALLBACK_MODELS = [
   "gemini-1.5-flash",
-  "gemini-2.0-flash",
   "gemini-1.5-flash-8b",
-  "gemini-2.5-flash",
+  "gemini-2.0-flash",
 ];
 
 const SYSTEM_PROMPT = `Eres un asistente experto en Ecopath with Ecosim (EwE), el software de modelado de redes tróficas marinas y de aguas continentales. Tu rol es ayudar a investigadores, estudiantes y técnicos pesqueros a construir, balancear e interpretar modelos de Ecopath.
@@ -187,7 +186,7 @@ function handleApiKeySetupKey(event) {
 function init() {
   // Load saved settings
   const savedKey = localStorage.getItem(STORAGE_KEY_API) || DEFAULT_API_KEY;
-  const savedModel = localStorage.getItem(STORAGE_KEY_MODEL) || "gemini-2.0-flash";
+  const savedModel = localStorage.getItem(STORAGE_KEY_MODEL) || "gemini-1.5-flash";
 
   apiKeyInput.value = savedKey !== DEFAULT_API_KEY ? savedKey : "";
   modelSelect.value = savedModel;
@@ -214,7 +213,7 @@ function getApiKey() {
 }
 
 function getModel() {
-  return localStorage.getItem(STORAGE_KEY_MODEL) || "gemini-2.0-flash";
+  return localStorage.getItem(STORAGE_KEY_MODEL) || "gemini-1.5-flash";
 }
 
 function saveApiKey() {
